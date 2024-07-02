@@ -15,6 +15,15 @@
 
 </head>
 <body>
+  <header class="header">
+
+    <a href="#" class="logo"><img src="images/file.png" alt="" height="50" ></i> </a>
+    <h1>MCASEL</h1>
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmypy07hA8Dwo08jJ4yvCc1DOCr_4AKMg6dQ&s" id="icon">  
+            
+          
+  </header>
    
     <section class="about" id="about">
 
@@ -35,8 +44,9 @@
             </div>
 
         </div>
-    </section>
-    <style>@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap");
+    </section>  
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap");
 
         :root{
           --primary-color: #c21212;
@@ -45,7 +55,13 @@
           --white: #fff;
           --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
         }
-        
+        .dark-theme{
+          --primary-color: #ffffff;
+          --secondary: #2b2b2be8;
+          --black: #f7eded;
+          --white: #000000;
+          --box-shadow: 0 .5rem 3rem rgba(255, 255, 255, 0.1);
+        }        
         *{
           font-family: 'DM Sans', sans-serif;
           margin: 0; padding: 0;
@@ -208,11 +224,23 @@
       
       .about .container .about-content p{
         font-size: 1.6rem;
-        color: #444;
+        color: #c21d1d;
         padding: 1rem 0;
         line-height: 1.8;
       }
       
-      </style>
+    </style>
+    
+    <script>
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+            icon.src = "images/sun.png";
+        } else {
+            icon.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmypy07hA8Dwo08jJ4yvCc1DOCr_4AKMg6dQ&s";
+        }
+    }
+    
+    </script>
 </body>
 </html>
